@@ -140,7 +140,6 @@ static void Cipher(const block128_t in, int Nr, exp_t w, block128_t out) {
   ShiftRows(state);
   memcpy(rkey, w += 4, sizeof(rkey_t));
   AddRoundKey(state, rkey);
-  //printstate(state);
   for (int c = 0; c < 4; ++c)
     for (int r = 0; r < 4; ++r)
       *out++ = state[r][c];
