@@ -9,17 +9,6 @@ typedef uint32_t exp256_t[4 * (14 + 1)];
 typedef uint32_t* key_t, * exp_t;
 typedef uint32_t rkey_t[4];
 
-//#include <stdio.h>
-//
-//void printstate(state_t state) {
-//  for (int c = 0; c < 4; ++c) {
-//    for (int r = 0; r < 4; ++r)
-//      printf_s(" %02X", state[r][c]);
-//    printf_s("\r\n");
-//  }
-//  printf_s("\r\n");
-//}
-
 static inline uint32_t RotateRight(uint32_t x, int n) { return (x >> n) | (x << (32 - n)); }
 static inline uint8_t RotateRight8(uint8_t x, int n) { return (x >> n) | (x << (8 - n)); }
 
