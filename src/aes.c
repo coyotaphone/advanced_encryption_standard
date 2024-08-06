@@ -104,7 +104,7 @@ static void AddRoundKey(state_t state, const rkey_t w) {
 }
 
 static void KeyExpansion(const key_t key, int Nk, int Nr, exp_t exp) {
-  uint32_t Rcon[10] = {
+  static const uint32_t Rcon[10] = {
     0x01000000ui32, 0x02000000ui32, 0x04000000ui32, 0x08000000ui32, 0x10000000ui32,
     0x20000000ui32, 0x40000000ui32, 0x80000000ui32, 0x1b000000ui32, 0x36000000ui32
   };
